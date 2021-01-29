@@ -42,7 +42,7 @@ class Search extends Component{
                 onClick={()=>{this.handleClear()}}>
                     Clear Search
                 </button>
-                <AddRecipes/>
+                <AddRecipes addRecipes={this.props.addRecipes}/>
             </div>
         )
     }

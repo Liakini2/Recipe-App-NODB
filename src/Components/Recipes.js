@@ -71,7 +71,7 @@ class Recipes extends Component{
         return(
             <div>
                 <Header/> 
-                <Search filterRecipes={this.filterRecipes} reset={this.reset}/>
+                <Search filterRecipes={this.filterRecipes} reset={this.reset} addRecipes={this.addRecipes}/>
                 <RecipeDisplay recipes={this.state.recipes}/>
             </div>
         )
