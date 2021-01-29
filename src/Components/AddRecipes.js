@@ -7,7 +7,18 @@ class AddRecipes extends Component{
 
     render(){
         return(
-            <h1>Add Recipes</h1>
+            <div>
+                <h1>Add Recipes</h1>
+                <input 
+                placeholder='Recipe Name'/>
+                <input
+                placeholder='Ingredients Needed'/>
+                <input
+                placeholder='Image URL'/>
+                <input
+                placeholder='Instructions'/>
+                <button>Add Recipe</button>
+            </div>
         )
     }
 }
