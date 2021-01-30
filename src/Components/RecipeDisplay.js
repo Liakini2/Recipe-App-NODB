@@ -11,8 +11,14 @@ const RecipeDisplay=(props)=>{
                 alt={dishName}
                 src={imgUrl}
                 />
-                <p className='display'>
-                    {JSON.stringify(ingredientsNeeded)}</p>
+                {/* <p className='display'>
+                    {JSON.stringify(ingredientsNeeded)}</p> */}
+                {ingredientsNeeded.map((ingredient)=>{
+                    return (
+                    <li className='list display'>
+                        {ingredient}</li>
+                    )
+                })}
                 <p>{instructions}</p>
                 <span>
                     <button 
