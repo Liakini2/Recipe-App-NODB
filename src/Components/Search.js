@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import AddRecipes from './AddRecipes'
+
 
 class Search extends Component{
     constructor(){
@@ -28,22 +28,23 @@ class Search extends Component{
 
     render(){
         return(
-            <div>
+            <aside className='float'>
                 <h1>Search</h1>
                 <input 
                 placeholder='Search Recipes Here'
                 value={this.state.userInput}
                 onChange={(e)=> this.handleChange(e.target.value)}/>
                 <button
+                className='button'
                 onClick={()=>{this.handleClick()}}>
                     Search
                 </button>
                 <button
+                className='button'
                 onClick={()=>{this.handleClear()}}>
                     Clear Search
                 </button>
-                <AddRecipes addRecipes={this.props.addRecipes}/>
-            </div>
+            </aside>
         )
     }
 }

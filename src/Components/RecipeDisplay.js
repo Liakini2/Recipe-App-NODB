@@ -1,34 +1,34 @@
-import React, {Component} from "react"
-
-class RecipeDisplay extends Component{
-    render(){
-        let mappedRecipes = this.props.recipes.map((element, index)=>{
-            return(
-                <div key={index}>
-                    <p>{element.dishName}</p>
-                    <img 
-
-                    alt={element.dishName}
-                    src={element.imgUrl}
-                    />
-                    <p>{element.ingredientsNeeded}</p>
-                    <p>{element.instructions}</p>
-                    <button>
+const RecipeDisplay=(props)=>{
+    const{id, dishName, imgUrl, ingredientsNeeded, instructions, deleteRecipe} = props
+    return (
+        <section 
+        className='displayRecipes'>
+            <div className='recipeBox'>
+                <p className='display'>
+                    {dishName}</p>
+                <img 
+                className='recipeImage display'
+                alt={dishName}
+                src={imgUrl}
+                />
+                <p className='display'>
+                    {JSON.stringify(ingredientsNeeded)}</p>
+                <p>{instructions}</p>
+                <span>
+                    <button 
+                    onClick={()=>{deleteRecipe(id)}}
+                    className='button'>
                         Delete
                     </button>
-                    <button>
+                    <button
+                    className='button'>
                         Edit
                     </button>
-                </div>
-            )
-        })
-        return (
-            <div>
-                <h1>Available Recipes</h1>
-                {mappedRecipes}
+                </span>
             </div>
-        )
-    }
+        </section>
+    )
+    
 }
 
 export default RecipeDisplay

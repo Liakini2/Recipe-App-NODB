@@ -6,8 +6,8 @@ app.use(express.json())
 
 app.get('/api/recipes', rc.recipesDisplay)
 app.post('/api/recipes', rc.addRecipes)
-app.put(`/api/recipes/:${id}`, rc.editRecipes)
-app.delete(`/api/recipes/:${id}`, rc.deleteRecipe)
+app.put(`/api/recipes/:id`, rc.editRecipes)
+app.delete(`/api/recipes`, rc.deleteRecipe)
 
 
 const port = 3030

@@ -2,7 +2,7 @@ recipes = [
     {
         id: 0,
         dishName: 'Deviled Eggs',
-        imgUrl: 'https://media.istockphoto.com/photos/deviled-eggs-with-paprika-picture-id491169864?s=170x170',
+        imgUrl: 'https://media.istockphoto.com/photos/deviled-eggs-picture-id174978970?k=6&m=174978970&s=612x612&w=0&h=w622ibQ7SHoWDw1UyCOANjM8L4K20hwnLXaxPTyhxZY=',
         ingredientsNeeded: ['Eggs', 'Mayonaise', 'Bacon'],
         instructions: "Boil eggs"
     },
@@ -25,7 +25,7 @@ recipes = [
         dishName: 'Tacos',
         imgUrl: 'https://media.istockphoto.com/photos/soft-beef-tacos-with-fries-picture-id614313140?s=170x170',
         ingredientsNeeded: ['Tortillas', 'Ground Beef', 'Cheese', 'Letuce', 'Tomatoe'],
-        instructions: 'Eat all the tacos, cause you are super hungry'
+        instructions: 'Eat all the tacos'
     },
     {
         id: 4,
@@ -49,7 +49,7 @@ recipes = [
         instructions: 'Savory or Sweet, Yummy Treat'
     },
 ]
-id=0
+id=7
 
 module.exports = {
     recipesDisplay: (req, res)=>{
@@ -77,7 +77,8 @@ module.exports = {
         res.status(200).send(recipes)
     },
     deleteRecipe: (req, res)=>{
-        let index = recipes.findIndex(recipe=>recipe.id=== +req.params.id)
+        const {id} = req.query
+        let index = recipes.findIndex(recipe=>recipe.id=== +id)
         recipes.splice(index, 1)
         res.status(200).send(recipes)
     }

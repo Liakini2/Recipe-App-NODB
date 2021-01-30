@@ -1,12 +1,65 @@
 .App {
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  background-color: #393e41;
+  color: white;
+}
+
+header {
   background-image: url("https://www.backdropstyle.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/m/z/mz87.jpg");
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
   background-size: 100vw;
-  position: absolute;
+  position: relative;
+  height: 10vh;
   width: 100%;
   top: 0;
-  color: white;
+}
+
+.displayRecipes {
+  display: inline-block;
+  margin: 10px;
+}
+
+.float {
+  float: left;
+}
+
+.addRecipe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipeBox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 250px;
+  background-color: #587b7f;
+  border-radius: 10%;
+}
+
+.recipeImage {
+  height: 200px;
+  width: 200px;
+  border-radius: 25%;
+}
+
+.button {
+  margin: 10px;
+  background-color: #751a06;
+  border-radius: 35%;
+  height: 30px;
+  width: 55px;
+  border: solid 3px #1e2019;
+  color: #d3d0cb;
 }

@@ -35,15 +35,17 @@ class AddRecipes extends Component{
         })
     }
 
+
     handleAddRecipe=()=>{
         const {recipe, ingredients, image, instructions} = this.state
+        console.log('add recipe')
         this.props.addRecipes(recipe, image, ingredients, instructions)
     }
 
     render(){
         const {recipe, ingredients, image, instructions} = this.state
         return(
-            <div>
+            <aside className='addRecipe'>
                 <h1>Add Recipes</h1>
                 <input 
                 placeholder='Recipe Name'
@@ -62,10 +64,11 @@ class AddRecipes extends Component{
                 value={instructions}
                 onChange={(e)=>this.handleInstructions(e.target.value)}/>
                 <button
-                onClick={()=>{this.handleAddRecipe()}}>
+                className='button'
+                onClick={this.handleAddRecipe}>
                     Add Recipe
                 </button>
-            </div>
+            </aside>
         )
     }
 }
