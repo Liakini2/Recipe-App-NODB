@@ -57,7 +57,7 @@ class AddRecipes extends Component{
     render(){
         const {recipe, ingredients, image, instructions} = this.state
         return(
-            <aside className='addRecipe'>
+            <aside className='float addRecipe'>
                 <h1>Add Recipes</h1>
                 <input 
                 placeholder='Recipe Name'

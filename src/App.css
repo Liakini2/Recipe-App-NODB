@@ -21,19 +21,29 @@ header {
 }
 
 .displayRecipes {
-  display: inline-block;
+  /* display: inline-block; */
+  float: right;
   margin: 10px;
 }
 
 .float {
-  float: left;
-}
-
-.addRecipe {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  float: left;
+  width: 25%;
+}
+
+.search {
+  position: fixed;
+  left: 10px;
+}
+
+.addRecipe {
+  position: fixed;
+  top: 300px;
+  left: 10px;
 }
 
 .recipeBox {

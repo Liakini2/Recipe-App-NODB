@@ -28,7 +28,7 @@ class Search extends Component{
 
     render(){
         return(
-            <aside className='float'>
+            <aside className='float search'>
                 <h1>Search</h1>
                 
                 <input 

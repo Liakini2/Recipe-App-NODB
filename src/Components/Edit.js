@@ -50,24 +50,38 @@ class Edit extends Component{
         })
     }
 
+    // handleIngredients=()=>{
+    //     let{ingredients} = this.state
+    //     let ingredientsNeeded = []
+    //     let splits = ingredients.split(' ')
+    //     for(let i=0; i<splits.length; i++){
+    //         ingredientsNeeded.push(splits[i])
+    //     }
+    //     this.setState({
+    //         ingredientsNeeded: ingredientsNeeded
+    //     })
+    //     return ingredientsNeeded
+    // }
+
     handleIngredients=()=>{
         let{ingredients} = this.state
         let ingredientsNeeded = []
         let splits = ingredients.split(' ')
         for(let i=0; i<splits.length; i++){
             ingredientsNeeded.push(splits[i])
-            if(ingredientsNeeded.includes('')){
-                this.setState({
-                    ingredientsNeeded: this.props.ingredientsNeeded
-                })
-                return ingredientsNeeded
-            } else {
-                this.setState({
-                    ingredientsNeeded: ingredientsNeeded
-                })
-                return ingredientsNeeded
-            }   
         }
+        if(ingredientsNeeded[0]===('')){
+            this.setState({
+                ingredientsNeeded: this.props.ingredientsNeeded
+            })
+            ingredientsNeeded=this.props.ingredientsNeeded
+        } else {
+            this.setState({
+                ingredientsNeeded: ingredientsNeeded
+            })
+        }
+        
+        return ingredientsNeeded
     }
 
     updateRecipe=()=>{
@@ -108,7 +122,8 @@ class Edit extends Component{
                 /> 
                 <button
                 className='editBox button'
-                onClick={()=>{this.updateRecipe()}}>
+                onClick={()=>{
+                    this.updateRecipe()}}>
                     Update
                 </button>  
             </div>
