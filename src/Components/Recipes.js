@@ -26,7 +26,6 @@ class Recipes extends Component{
     }
 
     addRecipes=(dishName, imgUrl, ingredientsNeeded, instructions)=>{
-        console.log(dishName, imgUrl, ingredientsNeeded, instructions)
         axios.post(`/api/recipes`, {dishName, imgUrl, ingredientsNeeded, instructions})
         .then(res=>{
             this.setState({
@@ -49,7 +48,6 @@ class Recipes extends Component{
     deleteRecipe=(id)=>{
         axios.delete(`/api/recipes?id=${id}`)
             .then(res=>{
-                console.log(res.data)
                 this.setState({
                     recipes: res.data
                 })
@@ -74,7 +72,9 @@ class Recipes extends Component{
             <div>
                 <Header/> 
                 <main>
-                    <Search filterRecipes={this.filterRecipes} reset={this.componentDidMount}/>
+                    <Search 
+                    filterRecipes={this.filterRecipes} 
+                    reset={this.componentDidMount}/>
 
                     <AddRecipes addRecipes={this.addRecipes}/>
                     
@@ -90,6 +90,7 @@ class Recipes extends Component{
                         editRecipes={this.editRecipes}/>
                     ))
                     }
+
                 </main>
                 <Footer/>
             </div>

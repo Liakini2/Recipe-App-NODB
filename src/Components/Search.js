@@ -30,15 +30,18 @@ class Search extends Component{
         return(
             <aside className='float'>
                 <h1>Search</h1>
+                
                 <input 
                 placeholder='Search Recipes Here'
                 value={this.state.userInput}
                 onChange={(e)=> this.handleChange(e.target.value)}/>
+                
                 <button
                 className='button'
                 onClick={()=>{this.handleClick()}}>
                     Search
                 </button>
+                
                 <button
                 className='button'
                 onClick={()=>{this.handleClear()}}>
