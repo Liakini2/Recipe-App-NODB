@@ -35,8 +35,9 @@ class Recipes extends Component{
         .catch(err=>console.log(err))
     }
 
-    editRecipes=(id)=>{
-        axios.put(`/api/recipes/${id}`)
+    editRecipes=(id, dishName, imgUrl, ingredientsNeeded, instructions)=>{
+        console.log(id, dishName, imgUrl, ingredientsNeeded, instructions)
+        axios.put(`/api/recipes/${id}`, {dishName, imgUrl, ingredientsNeeded, instructions})
             .then(res=>{
                 this.setState({
                     recipes: res.data

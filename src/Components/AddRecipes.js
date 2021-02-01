@@ -31,7 +31,6 @@ class AddRecipes extends Component{
         for(let i=0; i<splits.length; i++){
             ingredientsNeeded.push(splits[i])
         }
-        // value = ""
         this.setState({
             ingredientsNeeded: ingredientsNeeded
         })

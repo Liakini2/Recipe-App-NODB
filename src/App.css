@@ -63,3 +63,7 @@ header {
   border: solid 3px #1e2019;
   color: #d3d0cb;
 }
+
+.editBox {
+  display: none;
+}
