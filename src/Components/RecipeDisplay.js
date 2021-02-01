@@ -23,6 +23,9 @@ const RecipeDisplay=(props)=>{
                     )
                 })}
 
+                {/* <p className='display'>
+                    {JSON.stringify(ingredientsNeeded)}</p> */}
+                    
                 <p>{instructions}</p>
                 
                 <span>

@@ -25,10 +25,6 @@ header {
   margin: 10px;
 }
 
-.list {
-  list-style-image: url("https://www.flaticon.com/svg/vstatic/svg/846/846444.svg?token=exp=1611968661~hmac=72d792ff7e3701a9ee130e66b5e5e5af");
-}
-
 .float {
   float: left;
 }

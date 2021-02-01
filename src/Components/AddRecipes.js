@@ -6,6 +6,7 @@ class AddRecipes extends Component{
         this.state={
             recipe: '',
             ingredients: '',
+            ingredientsNeeded: [],
             image: '',
             instructions: '',
         }
@@ -17,9 +18,22 @@ class AddRecipes extends Component{
         })
     }
 
-    handleIngredients=(value)=>{
+    ingredientsValue=(value)=>{
         this.setState({
             ingredients: value
+        })
+    }
+
+    handleIngredients=()=>{
+        let ingredients = this.state.ingredients
+        let ingredientsNeeded = this.state.ingredientsNeeded
+        let splits = ingredients.split(' ')
+        for(let i=0; i<splits.length; i++){
+            ingredientsNeeded.push(splits[i])
+        }
+        // value = ""
+        this.setState({
+            ingredientsNeeded: ingredientsNeeded
         })
     }
 
@@ -37,9 +51,8 @@ class AddRecipes extends Component{
 
 
     handleAddRecipe=()=>{
-        const {recipe, ingredients, image, instructions} = this.state
-        console.log('add recipe')
-        this.props.addRecipes(recipe, image, ingredients, instructions)
+        const {recipe, ingredientsNeeded, image, instructions} = this.state
+        this.props.addRecipes(recipe, image, ingredientsNeeded, instructions)
     }
 
     render(){
@@ -52,20 +65,25 @@ class AddRecipes extends Component{
                 value={recipe}
                 onChange={(e)=> this.handleRecipe(e.target.value)}/>
                 <input
+                id='ingredients'
                 placeholder='Ingredients Needed'
                 value={ingredients}
-                onChange={(e)=>this.handleIngredients(e.target.value)}/>
+                onChange={(e)=>this.ingredientsValue(e.target.value)}
+                />
                 <input
                 placeholder='Image URL'
                 value={image}
                 onChange={(e)=>this.handleImage(e.target.value)}/>
-                <input
+                <textarea
                 placeholder='Instructions'
                 value={instructions}
                 onChange={(e)=>this.handleInstructions(e.target.value)}/>
                 <button
                 className='button'
-                onClick={this.handleAddRecipe}>
+                onClick={()=>{
+                    this.handleIngredients()
+                    this.handleAddRecipe() 
+                    }}>
                     Add Recipe
                 </button>
             </aside>
