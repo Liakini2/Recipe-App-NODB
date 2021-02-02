@@ -29,13 +29,13 @@ class Search extends Component{
     render(){
         return(
             <aside className='float search'>
-                <h1>Search</h1>
+                <h1 className='text1'>Search</h1>
                 
                 <input 
                 placeholder='Search Recipes Here'
                 value={this.state.userInput}
                 onChange={(e)=> this.handleChange(e.target.value)}/>
-                
+                <br></br>
                 <button
                 className='button'
                 onClick={()=>{this.handleClick()}}>
@@ -45,7 +45,7 @@ class Search extends Component{
                 <button
                 className='button'
                 onClick={()=>{this.handleClear()}}>
-                    Clear Search
+                    Clear
                 </button>
             </aside>
         )

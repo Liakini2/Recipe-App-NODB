@@ -1,29 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+
 .App {
   padding: 0;
   margin: 0;
+  background-color: #393e41;
+  width: 100vw;
+  min-height: 100vh;
+  color: white;
+}
+
+.recipes {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #393e41;
-  color: white;
 }
 
 header {
   background-image: url("https://www.backdropstyle.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/m/z/mz87.jpg");
   background-repeat: no-repeat;
   background-size: 100vw;
-  position: relative;
+  font-size: 50px;
   height: 10vh;
   width: 100%;
   top: 0;
 }
 
-.displayRecipes {
-  /* display: inline-block; */
-  float: right;
-  margin: 10px;
+.text1 {
+  font-family: "Aclonica", sans-serif;
+  font-size: 40px;
+  margin: 15px;
 }
 
 .float {
@@ -31,19 +38,32 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  float: left;
+  float: right;
   width: 25%;
+}
+
+.display {
+  font-family: "Aclonica", sans-serif;
+  font-size: 25px;
+}
+
+.displayRecipes {
+  margin: 10px;
+  font-size: large;
 }
 
 .search {
   position: fixed;
-  left: 10px;
+  display: inline-block;
+  left: 0;
+  margin: 5px;
 }
 
 .addRecipe {
   position: fixed;
   top: 300px;
-  left: 10px;
+  left: 0;
+  margin: 5px;
 }
 
 .recipeBox {
@@ -53,15 +73,20 @@ header {
   justify-content: center;
   align-items: center;
   height: auto;
-  width: 250px;
+  width: 350px;
   background-color: #587b7f;
   border-radius: 10%;
+  margin: 1px;
 }
 
 .recipeImage {
   height: 200px;
-  width: 200px;
+  width: auto;
   border-radius: 25%;
+}
+
+button:hover {
+  background-color: #b27092;
 }
 
 .button {
@@ -69,7 +94,7 @@ header {
   background-color: #751a06;
   border-radius: 35%;
   height: 30px;
-  width: 55px;
+  width: 60px;
   border: solid 3px #1e2019;
   color: #d3d0cb;
 }

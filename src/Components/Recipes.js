@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, {Component} from 'react'
+// import './assets/css/fonts.css';
 import Header from './Header'
-import Footer from './Footer'
 import Search from './Search'
 import RecipeDisplay from './RecipeDisplay'
 import AddRecipes from './AddRecipes'
@@ -70,7 +70,7 @@ class Recipes extends Component{
     render(){
         const{recipes}=this.state
         return(
-            <div>
+            <div className='recipes'>
                 <Header/> 
                 <main>
                     <Search 
@@ -93,7 +93,6 @@ class Recipes extends Component{
                     }
 
                 </main>
-                <Footer/>
             </div>
         )
     }

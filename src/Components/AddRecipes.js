@@ -58,7 +58,7 @@ class AddRecipes extends Component{
         const {recipe, ingredients, image, instructions} = this.state
         return(
             <aside className='float addRecipe'>
-                <h1>Add Recipes</h1>
+                <h1 className='text1'>Add Recipes</h1>
                 <input 
                 placeholder='Recipe Name'
                 value={recipe}
@@ -83,7 +83,7 @@ class AddRecipes extends Component{
                     this.handleIngredients()
                     this.handleAddRecipe() 
                     }}>
-                    Add Recipe
+                    Add
                 </button>
             </aside>
         )

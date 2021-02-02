@@ -1,7 +1,7 @@
 const Header =()=>{
     return(
         <header>
-            <h1>Recipe Tracker</h1>
+            <h1 className='text1'>Recipe Tracker</h1>
         </header>
     )
 }
