@@ -94,7 +94,7 @@ class Edit extends Component{
 
     render(){
         return(
-            <div>
+            <div className='editDisplay'>
                 <button
                     className='button'
                     onClick={()=>{this.showEdit()}}>
@@ -116,6 +116,7 @@ class Edit extends Component{
                 onChange={(e)=>{this.updateIngredients(e.target.value)}}
                 />
                 <textarea
+                maxLength='270'
                 className='editBox'
                 placeholder='Edit Instructions'
                 onChange={(e)=>{this.updateInstructions(e.target.value)}}

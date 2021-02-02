@@ -14,13 +14,18 @@ const RecipeDisplay=(props)=>{
                 alt={dishName}
                 src={imgUrl}
                 />
-                {ingredientsNeeded.map((ingredient, index)=>{
-                    return (
-                    <li key={index}>
-                        {ingredient}</li>
-                    )
-                })}
-                <p>{instructions}</p>
+                <div>
+                    <p className='display'>Ingredients Needed</p>
+                    {ingredientsNeeded.map((ingredient, index)=>{
+                        return (
+                        <li key={index}
+                        className='list'>
+                            {ingredient}</li>
+                        )
+                    })}
+                </div>
+                <p className='display'>Instructions</p>
+                <span className='text2'>{instructions}</span>
                 <span>
                     
                     <button 

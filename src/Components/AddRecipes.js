@@ -54,26 +54,37 @@ class AddRecipes extends Component{
         this.props.addRecipes(recipe, image, ingredientsNeeded, instructions)
     }
 
+    clearInputs=()=>{
+        this.setState({
+            ingredientsNeeded: [],
+            ingredients: '', 
+            recipe: '',
+            image: '',
+            instructions: '',
+        })
+    }
+
     render(){
         const {recipe, ingredients, image, instructions} = this.state
         return(
-            <aside className='float addRecipe'>
+            <aside className='addRecipe'>
                 <h1 className='text1'>Add Recipes</h1>
                 <input 
                 placeholder='Recipe Name'
                 value={recipe}
                 onChange={(e)=> this.handleRecipe(e.target.value)}/>
                 <input
+                placeholder='Image URL'
+                value={image}
+                onChange={(e)=>this.handleImage(e.target.value)}/>
+                <input
                 id='ingredients'
                 placeholder='Ingredients Needed'
                 value={ingredients}
                 onChange={(e)=>this.ingredientsValue(e.target.value)}
                 />
-                <input
-                placeholder='Image URL'
-                value={image}
-                onChange={(e)=>this.handleImage(e.target.value)}/>
                 <textarea
+                maxLength='270'
                 placeholder='Instructions'
                 value={instructions}
                 onChange={(e)=>this.handleInstructions(e.target.value)}/>
@@ -81,7 +92,8 @@ class AddRecipes extends Component{
                 className='button'
                 onClick={()=>{
                     this.handleIngredients()
-                    this.handleAddRecipe() 
+                    this.handleAddRecipe()
+                    this.clearInputs() 
                     }}>
                     Add
                 </button>

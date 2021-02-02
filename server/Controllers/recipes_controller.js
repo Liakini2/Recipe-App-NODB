@@ -24,22 +24,22 @@ recipes = [
         id: 3,
         dishName: 'Tacos',
         imgUrl: 'https://media.istockphoto.com/photos/soft-beef-tacos-with-fries-picture-id614313140?s=170x170',
-        ingredientsNeeded: ['Tortillas', 'Ground Beef', 'Cheese', 'Letuce', 'Tomatoe'],
-        instructions: 'Eat all the tacos'
+        ingredientsNeeded: ['Tortillas', 'Ground Beef', 'Cheese', 'Letuce', 'Tomatoe', 'Sour Cream', 'Taco Seasoning', 'Onion'],
+        instructions: 'Saute onion in oil for 3 minutes, add ground beef and seasoning and cook until beef has turned brown in color. Warm tortillas in microwave or on stove top. Assemble your taco with prefered toppings.'
     },
     {
         id: 4,
-        dishName: 'Super good Shrimp',
-        imgUrl: 'https://media.istockphoto.com/photos/cajun-shrimp-picture-id610264540?s=170x170',
-        ingredientsNeeded: ['Shrimp', 'Spices'],
-        instructions: 'Cook the Shrimp, eat all the shrimp.'
+        dishName: 'Pumpkin Chili',
+        imgUrl: 'https://media.istockphoto.com/photos/latin-american-chilean-food-traditional-chilean-carbonara-stewed-beef-picture-id823104634?s=170x170',
+        ingredientsNeeded: ['Red Onion', 'Carrots', 'Green Bell Pepper', 'Garlic', 'Ground Beef', 'Pureed Pumpkin', 'Chicken Bone Broth'],
+        instructions: 'Saute onion in oil for 3 minutes. Then add carrots, garlic, and pepper. Cook for another 2 minutes. Add the ground beef and cook until the meat turns brown. Add the remaining ingredients and stir well. Secure lid on instant pot and allow food to cook 20 to 30 minutes.'
     },
     {
         id: 5,
-        dishName: 'Fried Rice',
+        dishName: 'Chicken Fried Rice',
         imgUrl: 'https://media.istockphoto.com/photos/chicken-fried-rice-picture-id945606006?s=170x170',
-        ingredientsNeeded: ['Rice', 'Egg', 'Vegitables'],
-        instructions: 'Cook rice at a high heat.'
+        ingredientsNeeded: ['Rice', 'Chicken', 'Egg', 'Vegetables', 'Soy Sauce', 'Ginger', 'Garlic'],
+        instructions: 'Cook white rice. In a skillet add ginger, garlic, and chicken. Once chicken is completely cooked place to the side. Add egg and vegetables. Cook until eggs are scrambled and vegetables are soft. Add all ingredients back into skillet, season to taste.'
     },
     {
         id: 6,
@@ -48,8 +48,43 @@ recipes = [
         ingredientsNeeded: ['Flour', 'Water', 'Egg', 'Vanilla'],
         instructions: 'Savory or Sweet, Yummy Treat'
     },
+    // {
+    //     id: 7,
+    //     dishName:
+    //     imgUrl:
+    //     ingredientsNeeded:
+    //     instructions:
+    // },
+    // {
+    //     id: 8,
+    //     dishName:
+    //     imgUrl:
+    //     ingredientsNeeded:
+    //     instructions:
+    // },
+    // {
+    //     id: 9,
+    //     dishName:
+    //     imgUrl:
+    //     ingredientsNeeded:
+    //     instructions:
+    // },
+    // {
+    //     id: 10,
+    //     dishName:
+    //     imgUrl:
+    //     ingredientsNeeded:
+    //     instructions:
+    // },
+    // {
+    //     id: 11,
+    //     dishName:
+    //     imgUrl:
+    //     ingredientsNeeded:
+    //     instructions:
+    // },
 ]
-id=7
+id=12
 
 module.exports = {
     recipesDisplay: (req, res)=>{

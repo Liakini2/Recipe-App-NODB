@@ -1,6 +1,5 @@
 import axios from 'axios'
 import React, {Component} from 'react'
-// import './assets/css/fonts.css';
 import Header from './Header'
 import Search from './Search'
 import RecipeDisplay from './RecipeDisplay'
