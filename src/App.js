@@ -1,4 +1,4 @@
-import './App.css';
+import './Recipe.css';
 import React, {Component} from 'react'
 import Recipes from './Components/Recipes'
 

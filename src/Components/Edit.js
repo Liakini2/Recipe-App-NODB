@@ -94,30 +94,30 @@ class Edit extends Component{
 
     render(){
         return(
-            <div className='editDisplay'>
+            <div className='editDisplay display'>
                 <button
-                    className='button'
+                    className='button display'
                     onClick={()=>{this.showEdit()}}>
                         Edit
                 </button>
                 <input
-                className='editBox'
+                className='input editBox'
                 placeholder='Edit Recipe Name'
                 onChange={(e)=>{this.updateDishName(e.target.value)}}
                 />
                 <input
-                className='editBox'
+                className='input editBox'
                 placeholder='Edit Image'
                 onChange={(e)=>{this.updateImage(e.target.value)}}
                 />
                 <input
-                className='editBox'
+                className='input editBox'
                 placeholder='Edit Ingredients'
                 onChange={(e)=>{this.updateIngredients(e.target.value)}}
                 />
                 <textarea
                 maxLength='270'
-                className='editBox'
+                className='input textarea editBox'
                 placeholder='Edit Instructions'
                 onChange={(e)=>{this.updateInstructions(e.target.value)}}
                 /> 
@@ -127,6 +127,13 @@ class Edit extends Component{
                     this.updateRecipe()}}>
                     Update
                 </button>  
+                <button
+                className='editBox button'
+                onClick={()=>{
+                    this.hideEdit()
+                }}>
+                    Cancel
+                </button>
             </div>
         )
     }

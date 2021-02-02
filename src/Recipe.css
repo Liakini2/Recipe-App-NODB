@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  background-color: #393e41;
+  color: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  height: 9vh;
+  width: 100vw;
+  background-image: url("https://www.backdropstyle.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/m/z/mz87.jpg");
+  text-align: center;
+  font-family: "Aclonica", sans-serif;
+  font-size: 40px;
+  padding-top: 20px;
+}
+
+.leftSide {
+  position: fixed;
+  top: 90px;
+  float: left;
+  left: 25px;
+  min-height: 85px;
+  width: 300px;
+  margin: 5px;
+}
+
+.leftText {
+  font-family: "Aclonica", sans-serif;
+  font-size: 40px;
+  margin: 15px;
+  text-align: center;
+  background-color: #87a8ab;
+}
+
+.searchButtons {
+  background-color: #87a8ab;
+}
+
+.addRecipes {
+  background-color: #87a8ab;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.displayRight {
+  margin-top: 90px;
+  margin-left: 350px;
+}
+
+.displayAllRecipes {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.recipeCard {
+  width: 370px;
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 350px;
+  background-color: #587b7f;
+  border-radius: 5%;
+  margin: 15px;
+}
+
+.display {
+  background-color: #587b7f;
+}
+
+.text2 {
+  font-family: "Aclonica", sans-serif;
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.recipeImage {
+  height: 200px;
+  width: auto;
+  border-radius: 5%;
+}
+
+.paragraph {
+  padding: 15px;
+  margin: 0 10px 0 10px;
+}
+
+.input {
+  width: 275px;
+  height: 20px;
+  margin: 5px;
+  padding: 2px;
+  color: white;
+  border: 2px solid #393e41;
+  background-color: #393e41;
+  border-radius: 4px;
+}
+
+.textarea {
+  height: 150px;
+}
+
+.button {
+  margin: 10px;
+  background-color: #553c25;
+  border-radius: 35%;
+  height: 30px;
+  width: 60px;
+  color: white;
+  border: solid 2px #1e2019;
+}
+
+button:hover {
+  background-color: #805b38;
+}
+
+.editBox {
+  display: none;
+}
+
+.editDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  width: 275px;
+  height: 20px;
+  margin: 5px;
+  padding: 2px;
+  color: white;
+  border: 2px solid #393e41;
+  background-color: #393e41;
+  border-radius: 4px;
+}

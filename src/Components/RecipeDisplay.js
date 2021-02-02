@@ -4,33 +4,32 @@ import Edit from './Edit'
 const RecipeDisplay=(props)=>{
     const{id, dishName, imgUrl, ingredientsNeeded, instructions, deleteRecipe, editRecipes} = props
     return (
-        <section 
-        className='float displayRecipes'>
-            <div className='recipeBox'>
-                <p className='display'>
+        <div 
+        className='displayAllRecipes'>
+            <div className='recipeCard'>
+                <p className='display text2'>
                     {dishName}</p>
                 <img 
-                className='recipeImage'
+                className='display recipeImage'
                 alt={dishName}
                 src={imgUrl}
                 />
-                <div>
-                    <p className='display'>Ingredients Needed</p>
+                <div className='display'>
+                    <p className='display text2'>Ingredients Needed</p>
                     {ingredientsNeeded.map((ingredient, index)=>{
                         return (
                         <li key={index}
-                        className='list'>
+                        className='list display'>
                             {ingredient}</li>
                         )
                     })}
                 </div>
-                <p className='display'>Instructions</p>
-                <span className='text2'>{instructions}</span>
-                <span>
-                    
+                <p className='display text2'>Instructions</p>
+                <span className='display paragraph'>{instructions}</span>
+                <span className='display'>
                     <button 
                     onClick={()=>{deleteRecipe(id)}}
-                    className='button'>
+                    className='button display'>
                         Delete
                     </button>
 
@@ -44,7 +43,7 @@ const RecipeDisplay=(props)=>{
                     />
                 </span>
             </div>
-        </section>
+        </div>
     )
 }
 

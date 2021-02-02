@@ -31,7 +31,7 @@ recipes = [
         id: 4,
         dishName: 'Pumpkin Chili',
         imgUrl: 'https://media.istockphoto.com/photos/latin-american-chilean-food-traditional-chilean-carbonara-stewed-beef-picture-id823104634?s=170x170',
-        ingredientsNeeded: ['Red Onion', 'Carrots', 'Green Bell Pepper', 'Garlic', 'Ground Beef', 'Pureed Pumpkin', 'Chicken Bone Broth'],
+        ingredientsNeeded: ['Red Onion', 'Carrots', 'Garlic', 'Ground Beef', 'Pureed Pumpkin', 'Chicken Bone Broth'],
         instructions: 'Saute onion in oil for 3 minutes. Then add carrots, garlic, and pepper. Cook for another 2 minutes. Add the ground beef and cook until the meat turns brown. Add the remaining ingredients and stir well. Secure lid on instant pot and allow food to cook 20 to 30 minutes.'
     },
     {
@@ -48,41 +48,41 @@ recipes = [
         ingredientsNeeded: ['Flour', 'Water', 'Egg', 'Vanilla'],
         instructions: 'Savory or Sweet, Yummy Treat'
     },
-    // {
-    //     id: 7,
-    //     dishName:
-    //     imgUrl:
-    //     ingredientsNeeded:
-    //     instructions:
-    // },
-    // {
-    //     id: 8,
-    //     dishName:
-    //     imgUrl:
-    //     ingredientsNeeded:
-    //     instructions:
-    // },
-    // {
-    //     id: 9,
-    //     dishName:
-    //     imgUrl:
-    //     ingredientsNeeded:
-    //     instructions:
-    // },
-    // {
-    //     id: 10,
-    //     dishName:
-    //     imgUrl:
-    //     ingredientsNeeded:
-    //     instructions:
-    // },
-    // {
-    //     id: 11,
-    //     dishName:
-    //     imgUrl:
-    //     ingredientsNeeded:
-    //     instructions:
-    // },
+    {
+        id: 7,
+        dishName: 'Spaghetti',
+        imgUrl: 'https://media.istockphoto.com/photos/pasta-plate-picture-id632439546?s=170x170',
+        ingredientsNeeded: ['Pasta', 'Tomatoe Sauce', 'Garlic'],
+        instructions: 'Boil Pasta'
+    },
+    {
+        id: 8,
+        dishName: 'Spaghetti',
+        imgUrl: 'https://media.istockphoto.com/photos/pasta-plate-picture-id632439546?s=170x170',
+        ingredientsNeeded: ['Pasta', 'Tomatoe Sauce', 'Garlic'],
+        instructions: 'Boil Pasta'
+    },
+    {
+        id: 9,
+        dishName: 'Spaghetti',
+        imgUrl: 'https://media.istockphoto.com/photos/pasta-plate-picture-id632439546?s=170x170',
+        ingredientsNeeded: ['Pasta', 'Tomatoe Sauce', 'Garlic'],
+        instructions: 'Boil Pasta'
+    },
+    {
+        id: 10,
+        dishName: 'Spaghetti',
+        imgUrl: 'https://media.istockphoto.com/photos/pasta-plate-picture-id632439546?s=170x170',
+        ingredientsNeeded: ['Pasta', 'Tomatoe Sauce', 'Garlic'],
+        instructions: 'Boil Pasta'
+    },
+    {
+        id: 11,
+        dishName: 'Spaghetti',
+        imgUrl: 'https://media.istockphoto.com/photos/pasta-plate-picture-id632439546?s=170x170',
+        ingredientsNeeded: ['Pasta', 'Tomatoe Sauce', 'Garlic'],
+        instructions: 'Boil Pasta'
+    },
 ]
 id=12
 

@@ -51,7 +51,8 @@ class AddRecipes extends Component{
 
     handleAddRecipe=()=>{
         const {recipe, ingredientsNeeded, image, instructions} = this.state
-        this.props.addRecipes(recipe, image, ingredientsNeeded, instructions)
+        const{addRecipes}=this.props
+        addRecipes(recipe, image, ingredientsNeeded, instructions)
     }
 
     clearInputs=()=>{
@@ -67,23 +68,28 @@ class AddRecipes extends Component{
     render(){
         const {recipe, ingredients, image, instructions} = this.state
         return(
-            <aside className='addRecipe'>
-                <h1 className='text1'>Add Recipes</h1>
+            <div className='addRecipes'>
+                <br></br>
+                <h1 className='leftText'>Add Recipes</h1>
                 <input 
+                className='input'
                 placeholder='Recipe Name'
                 value={recipe}
                 onChange={(e)=> this.handleRecipe(e.target.value)}/>
                 <input
+                className='input'
                 placeholder='Image URL'
                 value={image}
                 onChange={(e)=>this.handleImage(e.target.value)}/>
                 <input
+                className='input'
                 id='ingredients'
                 placeholder='Ingredients Needed'
                 value={ingredients}
                 onChange={(e)=>this.ingredientsValue(e.target.value)}
                 />
                 <textarea
+                className='input textarea'
                 maxLength='270'
                 placeholder='Instructions'
                 value={instructions}
@@ -97,7 +103,7 @@ class AddRecipes extends Component{
                     }}>
                     Add
                 </button>
-            </aside>
+            </div>
         )
     }
 }

@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 import Header from './Header'
 import Search from './Search'
 import RecipeDisplay from './RecipeDisplay'
-import AddRecipes from './AddRecipes'
+// import AddRecipes from './AddRecipes'
 
 
 class Recipes extends Component{
@@ -69,27 +69,29 @@ class Recipes extends Component{
     render(){
         const{recipes}=this.state
         return(
-            <div className='recipes'>
+            <div>
                 <Header/> 
                 <main>
                     <Search 
                     filterRecipes={this.filterRecipes} 
-                    reset={this.componentDidMount}/>
+                    reset={this.componentDidMount}
+                    addRecipes={this.addRecipes}/>
 
-                    <AddRecipes addRecipes={this.addRecipes}/>
-                    
-                    {recipes.map((recipe)=>(
-                        <RecipeDisplay 
-                        key={recipe.id}
-                        id={recipe.id}
-                        dishName={recipe.dishName}
-                        imgUrl={recipe.imgUrl}
-                        ingredientsNeeded={recipe.ingredientsNeeded}
-                        instructions={recipe.instructions} 
-                        deleteRecipe={this.deleteRecipe}
-                        editRecipes={this.editRecipes}/>
-                    ))
-                    }
+                    {/* <AddRecipes addRecipes={this.addRecipes}/> */}
+                    <div className='displayRight'>
+                        {recipes.map((recipe)=>(
+                            <RecipeDisplay 
+                            key={recipe.id}
+                            id={recipe.id}
+                            dishName={recipe.dishName}
+                            imgUrl={recipe.imgUrl}
+                            ingredientsNeeded={recipe.ingredientsNeeded}
+                            instructions={recipe.instructions} 
+                            deleteRecipe={this.deleteRecipe}
+                            editRecipes={this.editRecipes}/>
+                            ))
+                        }
+                    </div>
 
                 </main>
             </div>
