@@ -40,7 +40,7 @@
 }
 
 .searchButtons {
-  background-color: #87a8ab;
+  background-color: rgb(135, 168, 171);
 }
 
 .addRecipes {
@@ -50,6 +50,14 @@
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+}
+
+.display1 {
+  background-color: #87a8ab;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .displayRight {
@@ -116,20 +124,29 @@
 
 .button {
   margin: 10px;
-  background-color: #553c25;
-  border-radius: 35%;
-  height: 30px;
-  width: 60px;
+  border-radius: 12%;
   color: white;
   border: solid 2px #1e2019;
+  background-color: #6d454c;
+  height: 30px;
+  width: 60px;
 }
 
 button:hover {
-  background-color: #805b38;
+  background-color: #895860;
+}
+
+.buttons1 {
+  display: inline-flex;
+  flex-direction: row;
 }
 
 .editBox {
   display: none;
+}
+
+.editButton {
+  display: relative;
 }
 
 .editDisplay {

@@ -32,10 +32,12 @@ class Search extends Component{
             <div>
                 <div className='leftSide addRecipes'>
                     <h1 className='leftText'>Search</h1>
-                    
                     <input 
                     className='input'
                     placeholder='Search Recipes Here'
+                    type='text'
+                    name='q'
+                    aria-label="Search through site content"
                     value={this.state.userInput}
                     onChange={(e)=> this.handleChange(e.target.value)}/>
                     <br></br>
@@ -43,7 +45,9 @@ class Search extends Component{
                     <span className='searchButtons'>
                         <button
                         className='button'
-                        onClick={()=>{this.handleClick()}}>
+                        type='submit'
+                        onClick=
+                        {()=>{this.handleClick()}}>
                             Search
                         </button>
                         
@@ -53,7 +57,6 @@ class Search extends Component{
                             Clear
                         </button>
                     </span>
-
                     <AddRecipes addRecipes={this.props.addRecipes}/>
                 </div>
             </div>

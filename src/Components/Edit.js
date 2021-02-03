@@ -12,7 +12,6 @@ class Edit extends Component{
         }
     }
     showEdit=()=>{
-        // let id = this.props.id
         let showEdit = document.getElementsByClassName('editBox')
         for(let i=0; i<showEdit.length; i+=1){
             showEdit[i].style.display='block';
@@ -23,6 +22,20 @@ class Edit extends Component{
         let hideEdit = document.getElementsByClassName('editBox')
         for(let i=0; i<hideEdit.length; i+=1){
             hideEdit[i].style.display='none';
+        }
+    }
+
+    showEditButton=()=>{
+        let showEditButton = document.getElementsByClassName('editButton')
+        for(let i=0; i<showEditButton.length; i+=1){
+            showEditButton[i].style.display='block'
+        }
+    }
+
+    hideEditButton=()=>{
+        let hideEditButton = document.getElementsByClassName('editButton')
+        for(let i=0; i<hideEditButton.length; i+=1){
+            hideEditButton[i].style.display='none'
         }
     }
 
@@ -49,19 +62,6 @@ class Edit extends Component{
             instructions: value
         })
     }
-
-    // handleIngredients=()=>{
-    //     let{ingredients} = this.state
-    //     let ingredientsNeeded = []
-    //     let splits = ingredients.split(' ')
-    //     for(let i=0; i<splits.length; i++){
-    //         ingredientsNeeded.push(splits[i])
-    //     }
-    //     this.setState({
-    //         ingredientsNeeded: ingredientsNeeded
-    //     })
-    //     return ingredientsNeeded
-    // }
 
     handleIngredients=()=>{
         let{ingredients} = this.state
@@ -96,8 +96,11 @@ class Edit extends Component{
         return(
             <div className='editDisplay display'>
                 <button
-                    className='button display'
-                    onClick={()=>{this.showEdit()}}>
+                    className='button editButton display'
+                    onClick={()=>{
+                        this.showEdit()
+                        this.hideEditButton()
+                        }}>
                         Edit
                 </button>
                 <input
@@ -121,19 +124,24 @@ class Edit extends Component{
                 placeholder='Edit Instructions'
                 onChange={(e)=>{this.updateInstructions(e.target.value)}}
                 /> 
-                <button
-                className='editBox button'
-                onClick={()=>{
-                    this.updateRecipe()}}>
-                    Update
-                </button>  
-                <button
-                className='editBox button'
-                onClick={()=>{
-                    this.hideEdit()
-                }}>
-                    Cancel
-                </button>
+                <span className='display buttons1'>
+                    <button
+                    className='editBox button'
+                    onClick={()=>{
+                        this.updateRecipe()
+                        this.showEditButton()
+                        }}>
+                        Update
+                    </button>  
+                    <button
+                    className='editBox button'
+                    onClick={()=>{
+                        this.hideEdit()
+                        this.showEditButton()
+                    }}>
+                        Cancel
+                    </button>
+                </span>
             </div>
         )
     }

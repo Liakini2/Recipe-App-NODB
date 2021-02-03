@@ -34,7 +34,6 @@ class Recipes extends Component{
     }
 
     editRecipes=(id, dishName, imgUrl, ingredientsNeeded, instructions)=>{
-        console.log(id, dishName, imgUrl, ingredientsNeeded, instructions)
         axios.put(`/api/recipes/${id}`, {dishName, imgUrl, ingredientsNeeded, instructions})
             .then(res=>{
                 this.setState({
