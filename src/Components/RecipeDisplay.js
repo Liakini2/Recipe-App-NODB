@@ -19,7 +19,7 @@ const RecipeDisplay=(props)=>{
                     {ingredientsNeeded.map((ingredient, index)=>{
                         return (
                         <li key={index}
-                        className='list display'>
+                        className='display'>
                             {ingredient}</li>
                         )
                     })}

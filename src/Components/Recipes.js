@@ -3,7 +3,6 @@ import React, {Component} from 'react'
 import Header from './Header'
 import Search from './Search'
 import RecipeDisplay from './RecipeDisplay'
-// import AddRecipes from './AddRecipes'
 
 
 class Recipes extends Component{
