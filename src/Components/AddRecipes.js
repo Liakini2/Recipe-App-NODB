@@ -25,8 +25,8 @@ class AddRecipes extends Component{
     }
 
     handleIngredients=()=>{
-        let ingredients = this.state.ingredients
-        let ingredientsNeeded = this.state.ingredientsNeeded
+        let {ingredients} = this.state
+        let {ingredientsNeeded} = this.state
         let splits = ingredients.split(' ')
         for(let i=0; i<splits.length; i++){
             ingredientsNeeded.push(splits[i])
